@@ -173,11 +173,24 @@ function generateContactLinks() {
     }
 }
 
+function populateTextContent() {
+    if (typeof textContent !== 'undefined') {
+        document.getElementById('hero-title').innerHTML = textContent.heroTitle;
+        document.getElementById('hero-subtitle').textContent = textContent.heroSubtitle;
+        document.getElementById('hero-description').textContent = textContent.heroDescription;
+        document.getElementById('about-text-1').textContent = textContent.aboutText1;
+        document.getElementById('about-text-2').textContent = textContent.aboutText2;
+        document.getElementById('contact-text-1').textContent = textContent.contactText;
+        document.getElementById('footer-text').innerHTML = textContent.footerText;
+    }
+}
+
 // Initialize all functionality
 document.addEventListener('DOMContentLoaded', () => {
     createTypingEffect();
     initThemeToggle();
     generateContactLinks();
+    populateTextContent();
     
     // Add loading animation
     document.body.classList.add('loaded');

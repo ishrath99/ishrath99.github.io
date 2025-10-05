@@ -44,12 +44,9 @@
         <section id="home" class="hero">
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1 class="hero-title">Hi, I'm <span class="highlight">Ishrath</span></h1>
-                    <p class="hero-subtitle">Full Stack Developer & Designer</p>
-                    <p class="hero-description">
-                        I create digital experiences that are both beautiful and functional.
-                        Passionate about clean code, innovative solutions, and continuous learning.
-                    </p>
+                    <h1 id="hero-title" class="hero-title"></h1>
+                    <p id="hero-subtitle" class="hero-subtitle"></p>
+                    <p id="hero-description" class="hero-description"></p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
                         <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -67,15 +64,8 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>
-                            Welcome to my portfolio! I'm a passionate developer with experience in 
-                            building web applications and solving complex problems through code.
-                        </p>
-                        <p>
-                            My journey in technology began with curiosity and has evolved into a 
-                            career focused on creating impactful digital solutions. I enjoy working 
-                            with modern technologies and continuously expanding my skill set.
-                        </p>
+                        <p id="about-text-1"></p>
+                        <p id="about-text-2"></p>
                         <div class="skills">
                             <h3>Skills & Technologies</h3>
                             <div class="skills-grid">
@@ -177,10 +167,7 @@
                 <h2 class="section-title">Get In Touch</h2>
                 <div class="contact-content">
                     <div class="contact-text">
-                        <p>
-                            I'm always interested in new opportunities and collaborations. 
-                            Whether you have a project in mind or just want to connect, feel free to reach out!
-                        </p>
+                        <p id="contact-text-1"></p>
                     </div>
                     <div class="contact-links">
                     </div>
@@ -192,7 +179,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Ishrath. All rights reserved.</p>
+                <p id="footer-text"></p>
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
@@ -204,6 +191,7 @@
     </footer>
 
     <script src="contact-data.js"></script>
+    <script src="text-content.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
