@@ -59,7 +59,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.project-card, .skill-tag, .about-text, .contact-content');
+    const animatedElements = document.querySelectorAll('.project-card, .about-text, .contact-content');
     animatedElements.forEach(el => observer.observe(el));
 });
 
@@ -185,12 +185,27 @@ function populateTextContent() {
     }
 }
 
+function generateSkills() {
+    const skillsGrid = document.querySelector('.skills-grid');
+    if (skillsGrid && typeof skills !== 'undefined') {
+        skillsGrid.innerHTML = ''; // Clear existing skills
+        skills.forEach(skill => {
+            const skillTag = document.createElement('span');
+            skillTag.className = 'skill-tag';
+            skillTag.textContent = skill;
+            skillsGrid.appendChild(skillTag);
+            observer.observe(skillTag);
+        });
+    }
+}
+
 // Initialize all functionality
 document.addEventListener('DOMContentLoaded', () => {
     createTypingEffect();
     initThemeToggle();
     generateContactLinks();
     populateTextContent();
+    generateSkills();
     
     // Add loading animation
     document.body.classList.add('loaded');
