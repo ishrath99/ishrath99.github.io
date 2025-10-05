@@ -135,10 +135,40 @@ function initThemeToggle() {
     }
 }
 
+function generateContactLinks() {
+    const contactLinksContainer = document.querySelector('.contact-links');
+    if (contactLinksContainer && typeof contacts !== 'undefined') {
+        contactLinksContainer.innerHTML = ''; // Clear existing links
+        contacts.forEach(contact => {
+            const link = document.createElement('a');
+            link.href = contact.href;
+            link.className = 'contact-link';
+
+            if (!contact.href.startsWith('mailto:')) {
+                link.target = contact.target;
+                if (contact.target === '_blank') {
+                    link.rel = 'noopener noreferrer';
+                }
+            }
+
+            const icon = document.createElement('i');
+            icon.className = contact.iconClass;
+
+            const span = document.createElement('span');
+            span.textContent = contact.text;
+
+            link.appendChild(icon);
+            link.appendChild(span);
+            contactLinksContainer.appendChild(link);
+        });
+    }
+}
+
 // Initialize all functionality
 document.addEventListener('DOMContentLoaded', () => {
     createTypingEffect();
     initThemeToggle();
+    generateContactLinks();
     
     // Add loading animation
     document.body.classList.add('loaded');
