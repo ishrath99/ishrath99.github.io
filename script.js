@@ -37,11 +37,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
     }
 });
 
@@ -91,7 +89,7 @@ function createTypingEffect() {
     if (!highlight) return;
     
     // This is a simple implementation - you can enhance it further
-    highlight.style.borderRight = '2px solid #2563eb';
+    highlight.style.borderRight = '2px solid var(--primary-color)';
     
     // Remove typing cursor after animation
     setTimeout(() => {
@@ -117,21 +115,32 @@ function validateForm(form) {
     return true;
 }
 
-// Theme toggle functionality (for future enhancement)
+// Theme toggle functionality
 function initThemeToggle() {
-    const theme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', theme);
-    
-    // You can add a theme toggle button later
-    const toggleButton = document.querySelector('.theme-toggle');
-    if (toggleButton) {
-        toggleButton.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        });
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const themeIcon = themeToggleButton.querySelector('i');
+
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    let currentTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+
+    themeToggleButton.addEventListener('click', () => {
+        const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+        if (theme === 'dark') {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        } else {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
     }
 }
 
@@ -196,7 +205,7 @@ document.head.insertAdjacentHTML('beforeend', `
         .btn:focus,
         .project-link:focus,
         .contact-link:focus {
-            outline: 2px solid #2563eb;
+            outline: 2px solid var(--primary-color);
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -253,11 +262,9 @@ function debounce(func, wait) {
 const handleScroll = debounce(() => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
     }
 }, 10);
 
