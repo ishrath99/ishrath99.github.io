@@ -1,9 +1,9 @@
 const textContent = {
     heroTitle: "Hi, I'm <span class=\"highlight\">Ishrath</span>",
-    heroSubtitle: "Full Stack Developer & Designer",
-    heroDescription: "I create digital experiences that are both beautiful and functional. Passionate about clean code, innovative solutions, and continuous learning.",
-    aboutText1: "Welcome to my portfolio! I'm a passionate developer with experience in building web applications and solving complex problems through code.",
-    aboutText2: "My journey in technology began with curiosity and has evolved into a career focused on creating impactful digital solutions. I enjoy working with modern technologies and continuously expanding my skill set.",
-    contactText: "I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to connect, feel free to reach out!",
-    footerText: "&copy; 2025 | All rights reserved."
+    heroSubtitle: "Engineer • Developer • Curious Mind",
+    heroDescription: "\"Empty your mind, be formless, shapeless — like water. Now you put water in a cup, it becomes the cup; you put water into a bottle it becomes the bottle; you put it in a teapot it becomes the teapot. Now water can flow or it can crash. Be water, my friend.\" — Bruce Lee",
+    aboutText1: "I’m a full-stack developer with an interdisciplinary background that bridges Biomedical Engineering, AI, and software systems. Currently, I work at Cloud Solutions International, where I design and develop scalable microservices, automate releases, and manage Kubernetes-based deployments. I enjoy solving complex problems by connecting ideas across domains",
+    aboutText2: "Outside of work, you’ll often find me practicing calisthenics, playing soccer with friends, or writing short stories and exploring random new skills.",
+    contactText: "If you’d like to collaborate, share ideas, or discuss how technology can make things smarter and simpler, feel free to reach out. Always happy to connect with fellow creators and curious thinkers.",
+    footerText: "&copy; 2025 | Thanks to Coding Agents for bringing this portfolio to life."
 };
