@@ -5,5 +5,5 @@ const textContent = {
     aboutText1: "Welcome to my portfolio! I'm a passionate developer with experience in building web applications and solving complex problems through code.",
     aboutText2: "My journey in technology began with curiosity and has evolved into a career focused on creating impactful digital solutions. I enjoy working with modern technologies and continuously expanding my skill set.",
     contactText: "I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to connect, feel free to reach out!",
-    footerText: "&copy; 2024 Ishrath. All rights reserved."
+    footerText: "&copy; 2025 | All rights reserved."
 };

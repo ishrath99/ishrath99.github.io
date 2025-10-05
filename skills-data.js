@@ -1,10 +1,19 @@
 const skills = [
-    "JavaScript",
     "Python",
+    "Java",
+    "MATLAB",
+    "Django",
+    "Spring Boot",
+    "Liquibase",
     "React",
-    "Node.js",
-    "HTML/CSS",
-    "Git",
-    "SQL",
-    "AWS"
+    "Angular",
+    "PostgreSQL",
+    "Oracle",
+    "MongoDB",
+    "Neo4j",
+    "Redis",
+    "Kubernetes",
+    "ArgoCD",
+    "Jenkins",
+    "Docker"
 ];
