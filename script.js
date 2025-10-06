@@ -199,6 +199,16 @@ function generateSkills() {
     }
 }
 
+function setLastUpdatedDate() {
+    if (typeof lastUpdated !== 'undefined' && document.getElementById('last-updated-date')) {
+        const date = new Date(lastUpdated);
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = date.toLocaleDateString('en-US', options);
+        const time = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('last-updated-date').textContent = `${formattedDate} at ${time}`;
+    }
+}
+
 // Initialize all functionality
 document.addEventListener('DOMContentLoaded', () => {
     createTypingEffect();
@@ -206,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generateContactLinks();
     populateTextContent();
     generateSkills();
+    setLastUpdatedDate();
     
     // Add loading animation
     document.body.classList.add('loaded');
