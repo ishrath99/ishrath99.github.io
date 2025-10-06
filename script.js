@@ -199,6 +199,65 @@ function generateSkills() {
     }
 }
 
+function generateProjects() {
+    const projectsGrid = document.querySelector('.projects-grid');
+    if (projectsGrid && typeof projects !== 'undefined') {
+        projectsGrid.innerHTML = ''; // Clear existing projects
+        projects.forEach(project => {
+            const projectCard = document.createElement('div');
+            projectCard.className = 'project-card';
+
+            const projectImage = document.createElement('div');
+            projectImage.className = 'project-image';
+            const icon = document.createElement('i');
+            icon.className = project.icon;
+            projectImage.appendChild(icon);
+
+            const projectContent = document.createElement('div');
+            projectContent.className = 'project-content';
+
+            const title = document.createElement('h3');
+            title.textContent = project.title;
+
+            const description = document.createElement('p');
+            description.textContent = project.description;
+
+            const tags = document.createElement('div');
+            tags.className = 'project-tags';
+            project.tags.forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'tag';
+                span.textContent = tag;
+                tags.appendChild(span);
+            });
+
+            const links = document.createElement('div');
+            links.className = 'project-links';
+            project.links.forEach(linkData => {
+                const link = document.createElement('a');
+                link.href = linkData.href;
+                link.className = 'project-link';
+                const linkIcon = document.createElement('i');
+                linkIcon.className = linkData.icon;
+                link.appendChild(linkIcon);
+                link.appendChild(document.createTextNode(` ${linkData.text}`));
+                links.appendChild(link);
+            });
+
+            projectContent.appendChild(title);
+            projectContent.appendChild(description);
+            projectContent.appendChild(tags);
+            projectContent.appendChild(links);
+
+            projectCard.appendChild(projectImage);
+            projectCard.appendChild(projectContent);
+
+            projectsGrid.appendChild(projectCard);
+            observer.observe(projectCard);
+        });
+    }
+}
+
 function setLastUpdatedDate() {
     if (typeof lastUpdated !== 'undefined' && document.getElementById('last-updated-date')) {
         const date = new Date(lastUpdated);
@@ -215,6 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generateContactLinks();
     populateTextContent();
     generateSkills();
+    generateProjects();
     setLastUpdatedDate();
     
     // Add loading animation
