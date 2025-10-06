@@ -204,8 +204,7 @@ function setLastUpdatedDate() {
         const date = new Date(lastUpdated);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const formattedDate = date.toLocaleDateString('en-US', options);
-        const time = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-        document.getElementById('last-updated-date').textContent = `${formattedDate} at ${time}`;
+        document.getElementById('last-updated-date').textContent = formattedDate;
     }
 }
 
