@@ -29,5 +29,41 @@ const projects = [
             { "icon": "fab fa-github", "text": "github", "href": "https://github.com/internTrio/ActivityRecognition" },
             { "icon": "fas fa-video", "text": "Demo", "href": "https://drive.google.com/file/d/1C8P8ajW2Kv7f_yFa3gTZEYLZTUC65wgb/view?usp=drive_link" }
         ]
+    },
+    {
+        "icon": "fas fa-user-check",
+        "title": "Face recognition",
+        "description": "A Face recognition system to improve security in switch rooms of housing schemes in Singapore. Implemented deep learning based face embedding retrieval and face feature analysis to improve system accuracy.",
+        "tags": ["Python", "TensorFlow", "Keras", "OpenCV"],
+        "links": [
+            { "icon": "fab fa-github", "text": "github", "href": "https://github.com/internTrio/FaceRecognitionTask" }
+        ]
+    },
+    {
+        "icon": "fas fa-users",
+        "title": "Computationally-efficient people counting system",
+        "description": "A light-weight, low-cost and accurate people counting system for edge devices. Designed object tracking algorithms and applied model compression techniques to speed up live inference.",
+        "tags": ["Python", "TensorFlow", "Keras", "OpenCV"],
+        "links": [
+            { "icon": "fab fa-github", "text": "github", "href": "https://github.com/internTrio/peopleCounter" }
+        ]
+    },
+    {
+        "icon": "fas fa-walking",
+        "title": "Walksense - 3D Motion capturing system",
+        "description": "Sri Lanka's first low cost 3D motion capturing system for the whole body. Configured YOST IMU sensors for wireless data reading and developed motion analysis algorithms.",
+        "tags": ["Java", "C++", "NetBeans"],
+        "links": [
+            { "icon": "fab fa-github", "text": "github", "href": "https://github.com/ishrath99/BaseVersion" }
+        ]
+    },
+    {
+        "icon": "fas fa-robot",
+        "title": "SINDiB - Micromouse",
+        "description": "Micromouse project developed for RoboFest 2023. Integrated flood-fill algorithm on STM32 microcontroller, configured motors, and interfaced OLED display via SPI.",
+        "tags": ["C", "C++", "STM32CubeIDE"],
+        "links": [
+            { "icon": "fab fa-github", "text": "github", "href": "https://github.com/sanjith1999/SINDiB-MicroMouse" }
+        ]
     }
 ];
