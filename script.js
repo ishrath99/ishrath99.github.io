@@ -59,14 +59,14 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.project-card, .about-text, .contact-content');
+    const animatedElements = document.querySelectorAll('.project-card, .about-text, .contact-content, .publication-card');
     animatedElements.forEach(el => observer.observe(el));
 });
 
 // Add animation classes to CSS dynamically
 const style = document.createElement('style');
 style.textContent = `
-    .project-card, .skill-tag, .about-text, .contact-content {
+    .project-card, .skill-tag, .about-text, .contact-content, .publication-card {
         opacity: 0;
         transform: translateY(30px);
         transition: all 0.6s ease-out;
@@ -83,14 +83,14 @@ document.head.appendChild(style);
 function createTypingEffect() {
     const titleElement = document.querySelector('.hero-title');
     if (!titleElement) return;
-    
+
     const text = titleElement.textContent;
     const highlight = titleElement.querySelector('.highlight');
     if (!highlight) return;
-    
+
     // This is a simple implementation - you can enhance it further
     highlight.style.borderRight = '2px solid var(--primary-color)';
-    
+
     // Remove typing cursor after animation
     setTimeout(() => {
         highlight.style.borderRight = 'none';
@@ -101,17 +101,17 @@ function createTypingEffect() {
 function validateForm(form) {
     const email = form.querySelector('input[type="email"]');
     const message = form.querySelector('textarea');
-    
+
     if (email && !email.value.includes('@')) {
         alert('Please enter a valid email address');
         return false;
     }
-    
+
     if (message && message.value.length < 10) {
         alert('Please enter a message with at least 10 characters');
         return false;
     }
-    
+
     return true;
 }
 
@@ -258,6 +258,39 @@ function generateProjects() {
     }
 }
 
+function generatePublications() {
+    const publicationsGrid = document.querySelector('.publications-grid');
+    if (publicationsGrid && typeof publications !== 'undefined') {
+        publicationsGrid.innerHTML = '';
+        publications.forEach(pub => {
+            const pubCard = document.createElement('div');
+            pubCard.className = 'publication-card';
+
+            const content = document.createElement('div');
+            content.className = 'publication-content';
+
+            const title = document.createElement('h3');
+            title.innerHTML = `<strong>${pub.title}</strong> | <a href="${pub.link}" target="_blank" class="publication-link">${pub.linkText}</a>`;
+
+            const year = document.createElement('span');
+            year.className = 'publication-year';
+            year.textContent = pub.year;
+
+            const conference = document.createElement('p');
+            conference.textContent = pub.conference;
+
+            content.appendChild(title);
+            content.appendChild(conference);
+
+            pubCard.appendChild(content);
+            pubCard.appendChild(year);
+
+            publicationsGrid.appendChild(pubCard);
+            observer.observe(pubCard);
+        });
+    }
+}
+
 function setLastUpdatedDate() {
     if (typeof lastUpdated !== 'undefined' && document.getElementById('last-updated-date')) {
         const date = new Date(lastUpdated);
@@ -275,8 +308,9 @@ document.addEventListener('DOMContentLoaded', () => {
     populateTextContent();
     generateSkills();
     generateProjects();
+    generatePublications();
     setLastUpdatedDate();
-    
+
     // Add loading animation
     document.body.classList.add('loaded');
 });
@@ -294,7 +328,7 @@ document.head.insertAdjacentHTML('beforeend', `
         }
         
         /* Smooth hover effects */
-        .nav-link, .btn, .project-card, .contact-link, .skill-tag {
+        .nav-link, .btn, .project-card, .contact-link, .skill-tag, .publication-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
@@ -336,7 +370,7 @@ function lazyLoadImages() {
             }
         });
     });
-    
+
     images.forEach(img => imageObserver.observe(img));
 }
 
