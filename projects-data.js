@@ -63,7 +63,8 @@ const projects = [
         "description": "Micromouse project developed for RoboFest 2023. Integrated flood-fill algorithm on STM32 microcontroller, configured motors, and interfaced OLED display via SPI.",
         "tags": ["C", "C++", "STM32CubeIDE"],
         "links": [
-            { "icon": "fab fa-github", "text": "github", "href": "https://github.com/sanjith1999/SINDiB-MicroMouse" }
+            { "icon": "fab fa-github", "text": "github", "href": "https://github.com/sanjith1999/SINDiB-MicroMouse" },
+            { "icon": "fas fa-video", "text": "Demo", "href": "https://drive.google.com/file/d/1_QFpPTaaIe4WZVJidbpsUnzyyQLn9AZT/view?usp=drive_link" }
         ]
     }
 ];
