@@ -7,7 +7,7 @@ const projects = [
         "tags": ["Python", "Neo4j", "MCP", "A2A", "RAG", "Agno"],
         "links": [
             { "icon": "fab fa-github", "text": "Agno", "href": "https://github.com/agno-agi/agno" },
-            { "icon": "fas fa-video", "text": "Live Demo", "href": "https://drive.google.com/drive/folders/1a_IzIrnLEmcyqRpjB52K1gKL7j8sBWut" }
+            { "icon": "fas fa-video", "text": "Live Demo", "href": "https://drive.google.com/file/d/1jdiEFrAjf5XqVifuVcPCzHEG9C3fByJt/view?usp=drive_link" }
         ]
     },
     {
