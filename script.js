@@ -209,9 +209,17 @@ function generateProjects() {
 
             const projectImage = document.createElement('div');
             projectImage.className = 'project-image';
-            const icon = document.createElement('i');
-            icon.className = project.icon;
-            projectImage.appendChild(icon);
+            if (project.icon.includes('/') || project.icon.includes('.')) {
+                const img = document.createElement('img');
+                img.src = project.icon;
+                img.alt = `${project.title} logo`;
+                img.className = 'project-icon-img';
+                projectImage.appendChild(img);
+            } else {
+                const icon = document.createElement('i');
+                icon.className = project.icon;
+                projectImage.appendChild(icon);
+            }
 
             const projectContent = document.createElement('div');
             projectContent.className = 'project-content';
@@ -220,7 +228,7 @@ function generateProjects() {
             title.textContent = project.title;
 
             const description = document.createElement('p');
-            description.textContent = project.description;
+            description.innerHTML = project.description;
 
             const tags = document.createElement('div');
             tags.className = 'project-tags';
