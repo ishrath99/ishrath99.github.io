@@ -11,6 +11,13 @@ const projects = [
         ]
     },
     {
+        "icon": "assets/projects/release-automation-logo.png",
+        "title": "Release Automation Platform",
+        "description": "End-to-end automation platform for microservice releases, dependency management, and data migrations. Built a Django web interface for managing release dependencies, developed Jenkins pipelines for CI/CD, and automated database migrations with Liquibase via ArgoCD workflows.",
+        "tags": ["Python", "Django", "Jenkins", "Liquibase", "ArgoCD", "JavaScript"],
+        "links": []
+    },
+    {
         "icon": "assets/projects/fyp-logo.png",
         "title": "Custom computational microscope design and 3D image reconstruction",
         "description": "Designed a novel physics-inspired 3D imaging system using structured illumination to encode depth information onto a planar detector. Developed a computational reconstruction framework integrating deep learning and prior manifolds to solve the inverse problem, enabling 3D image recovery from compressive measurements.",
@@ -52,7 +59,7 @@ const projects = [
         "icon": "fas fa-walking",
         "title": "Walksense - 3D Motion capturing system",
         "description": "Sri Lanka's first low cost 3D motion capturing system for the whole body. Configured YOST IMU sensors for wireless data reading and developed motion analysis algorithms.",
-        "tags": ["Java", "C++", "NetBeans"],
+        "tags": ["Java", "C++", "jMonkeyEngine"],
         "links": [
             { "icon": "fab fa-github", "text": "github", "href": "https://github.com/ishrath99/BaseVersion" }
         ]
