@@ -56,7 +56,7 @@ const projects = [
         ]
     },
     {
-        "icon": "fas fa-walking",
+        "icon": "assets/projects/walksense-logo.png",
         "title": "Walksense - 3D Motion capturing system",
         "description": "Sri Lanka's first low cost 3D motion capturing system for the whole body. Configured YOST IMU sensors for wireless data reading and developed motion analysis algorithms.",
         "tags": ["Java", "C++", "jMonkeyEngine"],
@@ -65,7 +65,7 @@ const projects = [
         ]
     },
     {
-        "icon": "fas fa-robot",
+        "icon": "assets/projects/sindib-logo.png",
         "title": "SINDiB - Micromouse",
         "description": "Micromouse project developed for RoboFest 2023. Integrated flood-fill algorithm on STM32 microcontroller, configured motors, and interfaced OLED display via SPI.",
         "tags": ["C", "C++", "STM32CubeIDE"],
