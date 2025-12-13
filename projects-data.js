@@ -31,7 +31,7 @@ const projects = [
         ]
     },
     {
-        "icon": "fas fa-user-check",
+        "icon": "assets/projects/face-recognition-logo.png",
         "title": "Face recognition",
         "description": "A Face recognition system to improve security in switch rooms of housing schemes in Singapore. Implemented deep learning based face embedding retrieval and face feature analysis to improve system accuracy.",
         "tags": ["Python", "TensorFlow", "Keras", "OpenCV"],
@@ -40,7 +40,7 @@ const projects = [
         ]
     },
     {
-        "icon": "fas fa-users",
+        "icon": "assets/projects/people-counter-logo.png",
         "title": "Computationally-efficient people counting system",
         "description": "A light-weight, low-cost and accurate people counting system for edge devices. Designed object tracking algorithms and applied model compression techniques to speed up live inference.",
         "tags": ["Python", "TensorFlow", "Keras", "OpenCV"],
