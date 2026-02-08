@@ -1,6 +1,13 @@
 
 const projects = [
     {
+        "icon": "assets/projects/ivf-logo.png",
+        "title": "IVF Module for EHR Systems",
+        "description": "Production-grade IVF platform integrated with enterprise EHR systems. Architected IVF-specific database schemas, implemented a Spring Boot backend, and developed an Angular frontend to extend EHR workflows with IVF dashboards and clinical views. Integrated via Kafka and REST APIs for real-time interoperability.",
+        "tags": ["Java", "Spring Boot", "Angular", "TypeScript", "HTML", "Kafka", "REST APIs"],
+        "links": []
+    },
+    {
         "icon": "assets/projects/twindoctor-logo.png",
         "title": "TwinDoctor",
         "description": `An intelligent platform integrating agentic orchestration and MCP tools with graph-based knowledge retrieval for the healthcare domain. This system leverages Neo4j and RAG to drive complex workflows, with contributions to the open-source Agno library.`,

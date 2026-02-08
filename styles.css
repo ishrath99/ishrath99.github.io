@@ -709,6 +709,12 @@ button:focus,
 }
 
 /* Publications Section */
+.publications {
+    padding: 80px 0;
+    background: var(--section-background);
+    transition: background-color 0.3s ease;
+}
+
 .publications-grid {
     display: flex;
     flex-direction: column;
