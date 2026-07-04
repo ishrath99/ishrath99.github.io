@@ -1,9 +1,11 @@
 const skills = [
     "Python",
     "Java",
+    "Go",
     "MATLAB",
     "Django",
     "Spring Boot",
+    "Cerbos",
     "Liquibase",
     "React",
     "Angular",
