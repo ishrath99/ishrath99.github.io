@@ -1,6 +1,13 @@
 
 const projects = [
     {
+        "icon": "assets/projects/julia-logo.png",
+        "title": "Julia - Voice AI Nurse Assistant",
+        "description": "Real-time, voice-first AI assistant for clinical nurses to query patient EHR data, guidelines, tasks, and medication schedules entirely by voice over a low-latency WebRTC pipeline. Built with a privacy-by-construction design and a plugin-based provider/adapter backend, plus a Flutter Android client for hands-free interaction.",
+        "tags": ["Python", "FastAPI", "Pipecat", "WebRTC", "Neo4j", "MCP", "Flutter", "Dart"],
+        "links": []
+    },
+    {
         "icon": "assets/projects/ivf-logo.png",
         "title": "IVF Module for EHR Systems",
         "description": "Production-grade IVF platform integrated with enterprise EHR systems. Architected IVF-specific database schemas, implemented a Spring Boot backend, and developed an Angular frontend to extend EHR workflows with IVF dashboards and clinical views. Integrated via Kafka and REST APIs for real-time interoperability.",
