@@ -3,53 +3,16 @@
     \resumeSubHeadingListStart
 
         \resumeProjectHeading
-            {\textbf{Julia -- Voice AI Nurse Assistant}}{2026--Present}
-            {Real-time, voice-first AI assistant for clinical nurses (Android + WebRTC)}
-            \resumeItemListStart
-              \resumeItem{Built a real-time voice assistant for nurses to query EHR data, guidelines, tasks, and medications by voice}
-              \resumeItem{Engineered a low-latency WebRTC voice pipeline (Pipecat) streaming STT, LLM, and TTS}
-              \resumeItem{Designed a privacy-by-construction architecture keeping patient identity server-side, never exposed to the LLM}
-              \resumeItem{Implemented a plugin-based provider/adapter system for EHR, task, and medication integrations with safe fallbacks}
-              \resumeItem{Developed a Flutter Android client for hands-free nurse interaction over WebRTC}
-              \resumeItem{Tech Stack: Python, FastAPI, Pipecat, WebRTC, Neo4j, MCP, Flutter, Dart}
-            \resumeItemListEnd
-
-            \resumeProjectHeading
-            {\textbf{IVF Module for EHR Systems}}{2025--2026}
-            {Production-grade IVF platform integrated with enterprise EHR systems}
-            \resumeItemListStart
-              \resumeItem{Architected IVF-specific database schemas for treatment cycles, lab workflows, and longitudinal patient records}
-              \resumeItem{Implemented Spring Boot backend exposing IVF services as a standalone, EHR-agnostic module}
-              \resumeItem{Developed Angular frontend to extend EHR UI with IVF workflows, dashboards, and clinical views}
-              \resumeItem{Integrated the module with core EHR via Kafka event streaming and REST APIs for real-time interoperability}
-              \resumeItem{Ensured alignment between IVF workflows and EHR entities such as patient profiles, encounters, and records}
-              \resumeItem{Tech Stack: Java, Spring Boot, Angular, TypeScript, HTML, Kafka, REST APIs}
-            \resumeItemListEnd
-            
-            \resumeProjectHeading
-            {\textbf{TwinDoctor}}{2025--2026}
-            {Agentic workflow platform with multi-agent orchestration and graph-based intelligence}
-            \resumeItemListStart
-              \resumeItem{Implemented agentic workflows with coordinated multi-agent orchestration using MCP servers}
-              \resumeItem{Modeled complex entity relationships in Neo4j for context-aware data retrieval}
-              \resumeItem{Built RAG pipelines to enhance agent reasoning with healthcare knowledge bases}
-              \resumeItem{Implemented authentication and access control for secure agent interactions}
-              \resumeItem{Contributed bug fixes to the open-source \href{https://github.com/agno-agi/agno}{\underline{Agno}} agent framework}
-              \resumeItem{Tech Stack: Python, Neo4j, MCP, RAG, Agno}
-            \resumeItemListEnd
-            
-            \resumeProjectHeading
-            {\textbf{Release Automation Platform}}{2024--2025}
-            {Enterprise platform for microservice releases and dependency orchestration}
-            \resumeItemListStart
-              \resumeItem{Designed centralized data model to manage dependencies across microservices}
-              \resumeItem{Built Django web app to manage release metadata}
-              \resumeItem{Developed Jenkins pipelines to automate ingestion and validation of dependency data}
-              \resumeItem{Reduced release time from 1 hour to under 10 minutes by automating database migrations and workflows}
-              \resumeItem{Executed Python-based ArgoCD workflows for zero-downtime releases}
-              \resumeItem{Tech Stack: Python, Django, Jenkins, Liquibase, ArgoCD, JavaScript}
-            \resumeItemListEnd
-            
+        {\textbf{Gargantua} $|$ \href{https://github.com/ishrath99/gargantua}{\underline{github}}}{2026}
+        {Open-source operator-grade control plane for MCP-powered LLM agents}
+        \resumeItemListStart
+          \resumeItem{Built a platform to define agents, teams, and MCP servers as database rows with full CRUD, RBAC, and audit logging}
+          \resumeItem{Implemented AES-256-GCM envelope encryption with zero-downtime KEK rotation and RS256 JWT authentication}
+          \resumeItem{Designed a warm-handle MCP connection cache with ref-counting, leasing, and idle reaping}
+          \resumeItem{Developed a Next.js admin and chat console with SSE streaming, packaged in a single self-hosted container}
+          \resumeItem{Tech Stack: Python, FastAPI, Agno, PostgreSQL, Next.js, TypeScript, Docker}
+        \resumeItemListEnd
+        
         
         \resumeProjectHeading
         {\textbf{Computational Microscope Design and 3D Image Reconstruction} $|$ \href{https://github.com/sanjith1999/FRIS}{\underline{github}}}{2024}
@@ -62,33 +25,13 @@
         
         
         \resumeProjectHeading
-        {\textbf{Edge-based Activity Recognition Systems}}{2023}
-        {Real-time computer vision solutions deployed on constrained devices}
+        {\textbf{SINDiB -- Micromouse} $|$ \href{https://github.com/sanjith1999/SINDiB-MicroMouse}{\underline{github}}}{2023}
+        {Micromouse robot developed for RoboFest 2023}
         \resumeItemListStart
-          \resumeItem{Developed 3D CNN-based video classification models to detect illegal activities in residential environments}
-          \resumeItem{Implemented face recognition pipelines using deep feature embeddings for secure access control systems}
-          \resumeItem{Designed lightweight people-counting and object-tracking algorithms optimized for edge deployment}
-          \resumeItem{Tech Stack: Python, TensorFlow, Keras, OpenCV}
+          \resumeItem{Integrated a flood-fill maze-solving algorithm on an STM32 microcontroller}
+          \resumeItem{Configured motors and interfaced an OLED display via SPI communication}
+          \resumeItem{Tech Stack: C, C++, STM32CubeIDE}
         \resumeItemListEnd
-        
-        
-        \resumeProjectHeading
-        {\textbf{Walksense – 3D Motion Capture System} $|$ \href{https://github.com/ishrath99/BaseVersion}{\underline{github}}}{2021}
-        {Sri Lanka’s first low-cost full-body 3D motion capture system}
-        \resumeItemListStart
-          \resumeItem{Integrated wireless IMU sensors and developed motion analysis algorithms for full-body tracking}
-          \resumeItem{Implemented real-time visualization and motion processing pipelines}
-          \resumeItem{Tech Stack: Java, C++, jMonkeyEngine}
-        \resumeItemListEnd
-
-     % \resumeProjectHeading
-     %      {\textbf{SINDiB - Micromouse} $|$ \href{https://github.com/sanjith1999/SINDiB-MicroMouse}{\underline{github}}}{2023}
-     %      {Micromouse project developed for RoboFest 2023}
-     %      \resumeItemListStart
-     %        \resumeItem{Integration of flood-fill algorithm to the hardware (STM32 microcontroller)}
-     %        \resumeItem{Configuration of motors and Interfacing OLED display via SPI communication}
-     %        \resumeItem{Tools: C, C++, STM32CubeIDE}
-     %      \resumeItemListEnd
 
      % \resumeProjectHeading     
      %      {\textbf{Single-cycle RISC-V processor}}{2023}

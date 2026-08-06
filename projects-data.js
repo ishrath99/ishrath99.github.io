@@ -25,6 +25,15 @@ const projects = [
         ]
     },
     {
+        "icon": "assets/projects/gargantua-logo.png",
+        "title": "Gargantua",
+        "description": "An operator-grade, open-source control plane for MCP-powered LLM agents, where agents, teams, and MCP servers are defined as database rows and governed through a web console. Features encrypted secrets with KEK rotation, RS256 JWT auth, RBAC, and audit logging, plus a Next.js admin and chat UI packaged as a self-hosted container.",
+        "tags": ["Python", "FastAPI", "Agno", "PostgreSQL", "Next.js", "TypeScript", "Docker"],
+        "links": [
+            { "icon": "fab fa-github", "text": "github", "href": "https://github.com/ishrath99/gargantua" }
+        ]
+    },
+    {
         "icon": "assets/projects/release-automation-logo.png",
         "title": "Release Automation Platform",
         "description": "End-to-end automation platform for microservice releases, dependency management, and data migrations. Built a Django web interface for managing release dependencies, developed Jenkins pipelines for CI/CD, and automated database migrations with Liquibase via ArgoCD workflows.",
